@@ -10,7 +10,7 @@ function App() {
   const [filteredEvents, setFilteredEvents] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8000/events").then((response) => {
+    axios.get("https://event-calendar-backend-d4f7.onrender.com/events").then((response) => {
       setEvents(response.data);
     });
   }, []);

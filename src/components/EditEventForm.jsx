@@ -15,7 +15,7 @@ const EditEventForm = ({ event, onEventUpdated }) => {
       date,
       category,
     };
-    axios.put(`http://localhost:8000/events/${event._id}`, updatedEvent).then((response) => {
+    axios.put(`https://event-calendar-backend-d4f7.onrender.com/events/${event._id}`, updatedEvent).then((response) => {
       onEventUpdated(response.data);
     });
   };

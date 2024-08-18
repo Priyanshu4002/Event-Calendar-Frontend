@@ -15,7 +15,7 @@ const AddEventForm = ({ onEventAdded }) => {
       date,
       category,
     };
-    axios.post("http://localhost:8000/events", newEvent).then((response) => {
+    axios.post("https://event-calendar-backend-d4f7.onrender.com/events", newEvent).then((response) => {
       onEventAdded(response.data);
       setTitle("");
       setDescription("");
