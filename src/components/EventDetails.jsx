@@ -24,7 +24,7 @@ const EventDetails = ({setEvents,events, event, onClose }) => {
         <button onClick={onClose} >Close</button>
         <button onClick={()=>setShowModal(!showModal)} >Edit Details</button>
         <Modal show={showModal} onClose={toggleModal}>
-          <EditEventForm event={event} onEventUpdated={handleEventUpdated}/>
+          <EditEventForm event={event} setEvents={setEvents} onClose={onClose} onEventUpdated={handleEventUpdated}/>
         </Modal>
       </div>
     </div>

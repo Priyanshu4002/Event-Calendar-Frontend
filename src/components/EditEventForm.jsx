@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const EditEventForm = ({ event, onEventUpdated }) => {
+const EditEventForm = ({ event,setEvents, onEventUpdated , onClose }) => {
   const [title, setTitle] = useState(event.title);
   const [description, setDescription] = useState(event.description);
   const [date, setDate] = useState(event.date);
@@ -18,6 +18,19 @@ const EditEventForm = ({ event, onEventUpdated }) => {
     axios.put(`https://event-calendar-backend-d4f7.onrender.com/events/${event._id}`, updatedEvent).then((response) => {
       onEventUpdated(response.data);
     });
+  };
+
+  const handleDelete = () => {
+    axios.delete(`https://event-calendar-backend-d4f7.onrender.com/events/${event._id}`)
+      .then(() => {
+        setEvents((prevEvents) =>
+          prevEvents.filter((evt) => evt._id !== event._id)
+        );
+        onClose(); // Close the form after deleting
+      })
+      .catch((error) => {
+        console.error("Error deleting the event", error);
+      });
   };
 
   return (
@@ -45,7 +58,10 @@ const EditEventForm = ({ event, onEventUpdated }) => {
         <option value="Work">Work</option>
         <option value="Personal">Personal</option>
       </select>
-      <button type="submit">Update Event</button>
+      <div>
+        <button type="submit">Update Event</button>
+        <button type="button" onClick={handleDelete}>Delete Event</button>
+      </div>
     </form>
   );
 };
