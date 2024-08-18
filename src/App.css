@@ -1,38 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+
 .App {
+  font-family: Arial, sans-serif;
+  font-family: "Libre Baskerville", serif;
+  padding: 20px;
+  background: radial-gradient(ellipse farthest-side at 76% 77%, rgba(245, 228, 212, 0.25) 4%, rgba(255, 255, 255, 0) calc(4% + 1px)), radial-gradient(circle at 76% 40%, #fef6ec 4%, rgba(255, 255, 255, 0) 4.18%), linear-gradient(135deg, #ff0000 0%, #000036 100%), radial-gradient(ellipse at 28% 0%, #ffcfac 0%, rgba(98, 149, 144, 0.5) 100%), linear-gradient(180deg, #cd6e8a 0%, #f5eab0 69%, #d6c8a2 70%, #a2758d 100%); 
+  background-blend-mode: normal, normal, screen, overlay, normal;
+}
+
+.App h1{
+  margin-top: 6vh;
   text-align: center;
+  font-size: 9vh;
+  font-weight: 700;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.section1{
+  width: 100vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.calendar {
+  margin-left:4vw;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.days-grid{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+}
+
+.day {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+  position: relative;
+  width: 15%;
+  border-radius: 6px;
+  margin: 3px;
+  border: none;
+  outline: none;
+  /* text-align: center; */
+}
+
+.event {
+  background-color: #007bff;
+  color: white;
+  padding: 2px 5px;
+  margin-top: 5px;
+  border-radius: 3px;
+  /* position: relative; */
+  cursor: pointer;
+}
+
+
+.event-details {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fff;
+  color: black;
+  width: 200px;
+}
+
+/* .btn{
+  display: flex;
+} */
+
+.event-filter {
+  margin-bottom: 20px;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+}
+
+button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  margin-left: 2px;
+  background-color: #52105b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 7vh;
+  font-weight: 600;
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.header h2{
+  margin-left: 2vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  height: 4vw;
+  padding: 0px 15px 0px 15px;
+  font-weight: 600;
 }
+
+textarea{
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  height: 4vw;
+  padding-left: 15px;
+  padding-top: 16px;
+  font-weight: 600;
+}
+
+select{
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  height: 4vw;
+  padding: 0px 15px 0px 15px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 650px) {
+  .calendar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .day {
+    width: 90px;
+  }
+
+  .days-grid{
+    margin-left: 7vw;
+  }
+  
+}
+
+
