@@ -147,6 +147,10 @@ select{
     flex-direction: column;
   }
 
+  .fitdescription{
+    height: 5vh;
+  }
+
   .day {
     width: 80px;
     font-size: 0.7em;
@@ -172,7 +176,7 @@ select{
 
   button{
     height: 4vh;
-    padding-top: 5px;
+    padding-top: 1vh;
   }
 
   .calendar .header h2{

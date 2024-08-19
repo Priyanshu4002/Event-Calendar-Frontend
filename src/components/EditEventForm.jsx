@@ -49,6 +49,7 @@ const EditEventForm = ({ event,setEvents, onEventUpdated , onClose }) => {
         required
       />
       <textarea
+        className="fitdescription"
         placeholder="Event Description"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
