@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>React Calendar App</h1>
+      <h1>Event Planner</h1>
       <EventFilter
         categories={["Work", "Personal"]}
         onFilterChange={handleFilterChange}

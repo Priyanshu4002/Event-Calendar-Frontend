@@ -136,18 +136,51 @@ select{
 }
 
 @media screen and (max-width: 650px) {
+
+  .App h1{
+    margin-top: 2vh;
+    font-size: 5vh;
+  }
+
   .calendar {
     display: flex;
     flex-direction: column;
   }
 
   .day {
-    width: 90px;
+    width: 80px;
+    font-size: 0.7em;
   }
 
   .days-grid{
-    margin-left: 7vw;
+    margin-left: 5vw;
   }
+  
+  input{
+    height: 3.5vh;
+    padding-left: 10px;
+  }
+
+  textarea{
+    padding: 10px;
+  }
+
+  select{
+    padding-left: 10px;
+    height: 3.5vh;
+  }
+
+  button{
+    height: 4vh;
+    padding-top: 5px;
+  }
+
+  .calendar .header h2{
+    margin-left: 6vw;
+  }
+
+  
+
   
 }
 
